@@ -54,38 +54,13 @@ check-in-out-main/
 
 ---
 
-## Installation
-
-### Clone the repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/Check-In-Out-System.git
-```
-
-### Navigate to project directory
-
-```bash
-cd Check-In-Out-System
-```
-
-### Install dependencies
+## Run the project
+## Run the Project
 
 ```bash
 npm install
-```
-
-### Start MongoDB
-
-Ensure MongoDB is running locally.
-
-### Run the project
-
-```bash
 node main.js
 ```
-
-
-
 ## How It Works
 
 1. Register a new user.
