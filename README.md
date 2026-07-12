@@ -55,7 +55,6 @@ check-in-out-main/
 ---
 
 ## Run the project
-## Run the Project
 
 ```bash
 npm install
