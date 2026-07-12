@@ -84,13 +84,7 @@ Ensure MongoDB is running locally.
 node main.js
 ```
 
-Open your browser and visit:
 
-```
-http://localhost:3000
-```
-
----
 
 ## How It Works
 
