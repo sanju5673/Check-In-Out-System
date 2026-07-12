@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/SignUp.css">
+</head>
+
+<body>
+
+    <h1>Sign Up</h1>
+
+    <form action="/signup" method="post" enctype="multipart/form-data">
+        <div>
+            <input placeholder="Name" name="name" type="text" required>
+        </div>
+        <div>
+            <input placeholder="Contact Number" autocomplete="new-password" name="ph-number" type="tel"
+                maxlength="10" pattern="\d{10}" title="Please enter exactly 10 digits" required>
+        </div>
+        <div>
+            <input placeholder="Password" autocomplete="new-password" name="password" type="password"
+                pattern="(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character"
+                required>
+        </div>
+        <div>
+            <input placeholder="Confirm Password" autocomplete="new-password" name="confirm-password" type="password"
+                pattern="(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character"
+                required>
+        </div>
+        <!-- File input for photos -->
+        <div>
+            <label for="photo1">Upload Photo 1 (PNG only):</label>
+            <input type="file" name="photo1" accept=".png" required>
+        </div>
+        <div>
+            <label for="photo2">Upload Photo 2 (PNG only):</label>
+            <input type="file" name="photo2" accept=".png" required>
+        </div>
+        <div>
+            <input class="sub" type="submit">
+        </div>
+    </form>
+
+    <h3>Already have an account?</h3>
+    <a href="/">Go back to login page</a>
+
+</body>
+
+</html>

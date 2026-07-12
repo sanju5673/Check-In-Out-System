@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check In & Out System</title>
+  <style>
+    body {
+      font-family: "Dancing Script", cursive;
+      text-align: center;   
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: whitesmoke;
+    }
+
+    #container {
+      position: relative; /* To position the canvas over the video */
+      display: inline-block;
+    }
+
+    #video {
+      border: 2px solid black;
+      width: 640px; /* Ensure width matches canvas */
+      height: 480px; /* Ensure height matches canvas */
+      border-radius: 10px;
+    }
+
+    canvas {
+      position: absolute; /* Overlay the canvas on top of the video */
+      top: 94px;
+      left: 453px;
+      bottom: 0;
+      right: 0;
+      width: 640px; /* Ensure width matches video */
+      height: 480px; /* Ensure height matches video */
+      pointer-events: none; /* Allow clicks through canvas */
+    }
+
+    .status {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    .btn1, .btn2 {
+      padding: 10px;
+      font-size: 20px;
+    }
+
+    .btn1 {
+      background-color: lightgreen;
+    }
+
+    .btn1:hover {
+      border-radius: 40px;
+    }
+
+    .btn2 {
+      background-color: red;
+    }
+
+    .btn2:hover {
+      border-radius: 40px;
+    }
+
+    .in {
+      color: lightgreen;
+    }
+
+    .out {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello <%= userName %> </h1>
+  <div id="container">
+    <video id="video" width="640" height="480" autoplay muted></video>
+    <canvas id="canvas"></canvas> <!-- Add the canvas here -->
+  </div>
+  
+  <div class="status" id="status">Loading models...</div>
+  <button class="btn1" id="checkInButton" onclick="handleCheckIn()" disabled>Check In</button>
+  <button class="btn2" id="checkOutButton" onclick="handleCheckOut()" disabled>Check Out</button>
+  
+  
+  <!-- <div class="in">
+    <p>Check-In Time: <span id="checkInTime">N/A</span></p>
+  </div>
+  
+  <div class="out">
+    <p>Check-Out Time: <span id="checkOutTime">N/A</span></p>
+  </div> -->
+  <script>
+    let loggedInUserName = '<%= userName %>'; // This holds the username passed from EJS
+</script>
+  <script defer src="/js/face-api.min.js"></script>
+  <script defer src="js/script.js"></script>
+</body>
+</html>
+
+
